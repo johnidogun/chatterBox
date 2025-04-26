@@ -16,6 +16,8 @@ Authentication: JWT (JSON Web Tokens) / OAuth
 Hosting: Vercel / Netlify (Frontend) + Render / Railway / AWS (Backend & Database)
 
 🚀 Features
+
+
 User authentication (login, register, logout)
 
 Secure password handling and protected routes
