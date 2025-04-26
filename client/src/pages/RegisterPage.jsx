@@ -19,13 +19,12 @@ const RegisterPage = () => {
   setInputs((prev) =>({...prev, [e.target.name]: e.target.value}))
   }
 
-  // console.log(inputs)
+   console.log(inputs)
 
  const handleSubmit = async (e) =>{
   e.preventDefault()
   try{
-  //  const res = 
-   await axios.post("/auth/register", inputs)
+  const res = await axios.post("/auth/register", inputs)
     navigate("/login")
     
   }
@@ -38,11 +37,11 @@ const RegisterPage = () => {
 //  console.log("/test", res)
  
   return (
-    <div>RegisterPage
+    <div>
            <div className='container'>
         <h1 className='text'>Register</h1>
     <form className='form'>
-        <input required placeholder='UserName' name="username" type='text'onChange={handleChange} />
+        <input required placeholder='User name' name="username" type='text'onChange={handleChange} />
         {/* <input required placeholder='Surname' name="surname" type='text' onChange={handleChange}/> */}
         <input required placeholder='Email' name="email" type='text' onChange={handleChange}/>
         <input required placeholder='Password' name="password" type='Password' onChange={handleChange}/>
